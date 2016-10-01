@@ -1,8 +1,37 @@
 set nocompatible
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" Pathogen init
-source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mileszs/ack.vim'
+Plugin 'Align'
+Plugin 'kien/ctrlp.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/syntastic'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'alpaca-tc/vim-endwise'
+Plugin 'scrooloose/vim-fugitive'
+Plugin 'tommcdo/vim-fugitive-blame-ext'
+Plugin 'kris2k/vim-pathogen'
+Plugin 'casecommons/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'anyakichi/vim-surround'
+Plugin 'duff/vim-trailing-whitespace'
+Plugin 'benmills/vimux'
+Plugin 'leafgarland/typescript-vim'
+
+
+call vundle#end()            " required
+filetype plugin indent on
 
 " Plugin mappings
 nnoremap <silent> <leader>nf :NERDTreeFind<cr><c-w>=
@@ -83,6 +112,7 @@ set background=dark
 colorscheme solarized
 
 " Plugin settings
+let g:syntastic_disabled_filetypes=['ts']
 let g:syntastic_quiet_messages = { "level": "warnings",
                                  \ "type":  "style",
                                  \ "regex": 'proprietary attribute',
