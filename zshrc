@@ -111,6 +111,7 @@ alias enable_keypress="defaults write -g ApplePressAndHoldEnabled -bool false"
 alias disable_keypress="defaults write -g ApplePressAndHoldEnabled -bool false"
 alias brake="bundle exec rake"
 alias b="bundle exec"
+alias spoof="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo ifconfig en0 ether"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
