@@ -1,4 +1,3 @@
-set nocompatible
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -17,7 +16,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'alpaca-tc/vim-endwise'
 Plugin 'scrooloose/vim-fugitive'
 Plugin 'tommcdo/vim-fugitive-blame-ext'
@@ -108,8 +106,6 @@ set statusline+=%P                        " percentage of file
 
 " Colorscheme settings
 syntax enable
-set background=dark
-colorscheme solarized
 
 " Plugin settings
 let g:syntastic_disabled_filetypes=['ts']
